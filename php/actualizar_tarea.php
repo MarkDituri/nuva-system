@@ -11,10 +11,9 @@ $result="UPDATE tareas
 SET estado = '$id_estado_tarea'
 WHERE id_tarea = $id_tarea;";
 
-$resutl_ej = mysqli_query(
+$resutl_ej = mysqli_query( 
     $conexion, $result
 );
-
 
 if ($resutl_ej = $conexion->query($result)) {
     $sql_tarea = "SELECT * FROM `tareas` WHERE `status` = 'si' AND `id_tarea` = $id_tarea";
