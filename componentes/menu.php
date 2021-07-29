@@ -14,6 +14,9 @@ else if($donde == "empresa"){
 else if($donde == "cuenta"){
     $a_cuenta = "a_active";
 }
+else if($donde == "pagos"){
+    $a_pagos = "a_active";
+}
 ?>
 <div class="col-xl-2"></div>
 <div class="col-xl-2 cont-panel-menu">  
@@ -25,13 +28,19 @@ else if($donde == "cuenta"){
             <h4><?php echo "$nombre $apellido";?></h4>
             <p><?php echo $cargo;?></p>
         </a>
-
     </div>
     
     <ul class="cont-btns">
         <li class="<?php echo $a_inicio;?>"><a href="index.php"><i class="fas fa-home"></i> Inicio</li></a>
         <li class="<?php echo $a_miembros;?>"><a href="miembros.php"><i class="fas fa-user-friends"></i> Miembros</li></a>
         <li class="<?php echo $a_tareas;?>"><a href="tareas.php"><i class="fas fa-clipboard"></i> Tareas</li></a>
+        <?php
+        if($acceso == "master" ){
+        ?>
+        <li class="<?php echo $a_pagos  ;?>"><a href="pagos.php"><i class="fas fa-credit-card"></i> Pagos</li></a>
+        <?php 
+        }
+        ?>
         <li class="<?php echo $a_cuenta;?>"><a href="cuenta.php"><i class="fas fa-user"></i> Cuenta</li></a>
     </ul>
     

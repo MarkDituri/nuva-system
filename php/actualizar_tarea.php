@@ -60,7 +60,7 @@ if ($resutl_ej = $conexion->query($result)) {
             $id_responsable = $dato['id_usuario'];
             $nombre_responsable = $dato['nombre'];
             $apellido_responsable = $dato['apellido'];
-        }
+        } 
 
 
         if($id_estado_tarea == 3){

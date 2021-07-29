@@ -1249,7 +1249,6 @@ tr:nth-child(even) {
 .cont-accion-tarea{
     display: flex;
     justify-content: space-between;
-
 }
 
 .btn-borrar{    
