@@ -25,7 +25,7 @@
         $fecha_1_i = $dato['fecha_1'];
         $fecha_2_i = $dato['fecha_2'];
         $email_noti_1 = $dato['email_noti_1'];
-        $email_noti_2 = $dato['email_noti_2'];
+        $email_noti_2 = $dato['email_noti_2'];  
 
         if($email_noti_1 == "0"){  
             $email_noti_1 = "";
