@@ -70,8 +70,7 @@
 
 
                             while($dato = mysqli_fetch_array($sql_tarea_ej)) {
-                                $id_tarea = $dato['id_tarea'];
-                                $nombre = $dato['nombre'];
+                                $id_tarea = $dato['id_tarea'];                                
                                 $titulo = $dato['titulo'];
                                 $detalle = $dato['detalle'];
                                 $link_1 = $dato['link_1'];
