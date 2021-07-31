@@ -93,17 +93,17 @@
 
                             <div class="row sinNada cont-reg-pass-cl">
                                 <h4>Fecha de pago:*</h4>
-                                <input class="col-6 input2 b-all" type="date" name="fecha_1" id="fecha_1" value="">
+                                <input class="col-6 input2 b-all" type="date" name="fecha_pago" id="fecha_pago" value="">
                                 <br>
                             </div>  
 
                             <div class="row sinNada cont-reg-pass-cl">
                                 <h4>Monto $</h4>
-                                <input class="col-6 input2 b-all" type="number" name="fecha_1" id="fecha_1" value="">
+                                <input class="col-6 input2 b-all" type="number" name="monto_p" id="monto_p" value="">
                                 <br>
                             </div>          
                                       
-                            <input id="btn-guardar-tarea" class="btn-panel ultimo"type="submit" name="" id="" value="Guardar pago">
+                            <input id="btn-guardar-pago" class="btn-panel ultimo" type="submit" value="Guardar pago">
                         </form>
 
  

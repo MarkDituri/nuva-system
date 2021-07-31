@@ -123,7 +123,8 @@
                         $sql_estado_tarea = "SELECT * FROM estados_tareas;";
                         $sql_estado_tarea_ej = mysqli_query(
                             $conexion, $sql_estado_tarea
-                        );                                            
+                        );        
+                                                            
                         while($dato = mysqli_fetch_array($sql_estado_tarea_ej)) {
                             $id_estado_tarea = $dato['id_estado_tarea'];
                             $nombre_estado = $dato['nombre'];
