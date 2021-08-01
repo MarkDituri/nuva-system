@@ -32,7 +32,7 @@ $mail->Port = 587;
 $mail->SMTPAuth = true;
 $mail->Username = 'admin@intranet-nuvatronic.com';
 //Password to use for SMTP authentication
-$mail->Password = "Admin2021!!";
+$mail->Password = "Nuva2020!!mail";
 //Set who the message is to be sent from
 $mail->setFrom('admin@intranet-nuvatronic.com', 'Intranet Nuvatronic');
 //Set an alternative reply-to address
