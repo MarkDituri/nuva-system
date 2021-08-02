@@ -1250,6 +1250,9 @@ tr:nth-child(even) {
     display: flex;
     justify-content: space-between;
 }
+.estado-tarea:not(:disabled):not(.disabled).active, .estado-tarea:not(:disabled):not(.disabled):active, .show>.estado-tarea.dropdown-toggle{
+    color: #535353;
+}
 
 .btn-borrar{    
     padding: 0 20px;
@@ -1298,11 +1301,17 @@ tr:nth-child(even) {
     align-items: center;
     background-color: rgb(255, 255, 255);
     border-left: 4px solid #ffffff;
-    -webkit-box-shadow: 0px 10px 47px -30px rgb(0 0 0 / 47%);
-    -moz-box-shadow: 0px 10px 47px -30px rgba(0,0,0,0.47);
+    -webkit-box-shadow: 0px 3px 10px 3px rgb(0 0 0 / 8%);
+    -moz-box-shadow: 0px 3px 10px 3px rgb(0 0 0 / 8%);
     box-shadow: 0px 3px 10px 3px rgb(0 0 0 / 8%)!important;
     margin-bottom: 10px;
     margin-top: 10px;
+}
+.bloque .dropdown-menu.show, .cont-accion-tarea .dropdown-menu.show{
+    background-color: rgb(255, 255, 255)!important;
+    -webkit-box-shadow: 0px 3px 10px 3px rgb(0 0 0 / 8%);
+    -moz-box-shadow: 0px 3px 10px 3px rgb(0 0 0 / 8%);
+    box-shadow: 0px 3px 10px 3px rgb(0 0 0 / 8%)!important;
 }
 .cont-item-pago #pago-pen{
     border-left: 4px solid #fd6d14;

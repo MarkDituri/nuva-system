@@ -72,12 +72,14 @@
 
                                         if($estado == "Pago"){
                                             $classEstadoP = "drop-p-pago";
+                                            $iconEstadoP = '<i class="fas fa-check-circle"></i>';
                                         } else if($estado == "Pendiente"){
-                                            $classEstadoP = "drop-p-pen";
+                                            $classEstadoP = 'drop-p-pen';
+                                            $iconEstadoP = '<i class="far fa-calendar-alt"></i>';
                                         } else if($estado == "Vencido"){
                                             $classEstadoP = "drop-p-ven";
+                                            $iconEstadoP = '<i class="fas fa-exclamation-triangle"></i>';
                                         }
-
                                                      
                                         $fechaEntera = strtotime($fecha_pago);
                                         $anio = date("Y", $fechaEntera);
@@ -98,6 +100,7 @@
                                         $sql_usuario_ej = mysqli_query(
                                             $conexion, $sql_usuario
                                         );     
+
                                         while($dato = mysqli_fetch_array($sql_usuario_ej)) {
                                             $nombre_res = $dato['nombre'];
                                             $apellido_res = $dato['apellido'];
@@ -106,16 +109,16 @@
                                             echo "        <div style='background: url(php/$img_user); background-size:cover; background-position: center;' class='img-res'></div>";  
                                             echo "        <h2>$nombre_res</h2>";
                                         } 
+
                                         echo "    </div>";
                                         echo "    <div class='col-2 cont-dat-blo'>";
                                         echo "        <div class='dropdown'>";
                                         echo "            <a class='$classEstadoP btn btn-secondary dropdown-toggle' href='#' role='button' id='dropdownMenuLink' data-bs-toggle='dropdown' aria-expanded='false'>";
-                                        echo "                <i class='fas fa-check-circle'></i> $estado";
+                                        echo "                $iconEstadoP $estado";
                                         echo "            </a>";
                                         echo "            <ul class='dropdown-menu' aria-labelledby='dropdownMenuLink'>";
-                                        echo "                <li><a class='dropdown-item' href='#'>Paga</a></li>";
-                                        echo "                <li><a class='dropdown-item' href='#'>Another action</a></li>";
-                                        echo "                <li><a class='dropdown-item' href='#'>Something else here</a></li>";
+                                        echo "                <li><a class='dropdown-item' href='php/actualizar_pago.php?id_pago=$id_pago&id_usuario=$id_usuario'><i style='color: #00be6f' class='fas fa-check-circle'></i>Pago realizado</a></li>";
+                                        echo "                <li><a class='dropdown-item' href='#'><i style='color: #535353' class='far fa-trash-alt'></i>Eliminar</a></li>";
                                         echo "            </ul>";
                                         echo "        </div>";
                                         echo "    </div>";
