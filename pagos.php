@@ -60,7 +60,7 @@
                         <div class="row sinNada">
                             <div class="col-10 cont-item-pago">
                                 <?php 
-                                    $sql_pagos = "SELECT * FROM pagos order by fecha_pago";
+                                    $sql_pagos = "SELECT * FROM pagos WHERE status = 'si' order by fecha_pago";
                                     $sql_pagos_ej = mysqli_query($conexion, $sql_pagos );
 
                                     while($dato = mysqli_fetch_array($sql_pagos_ej)) {
@@ -68,6 +68,7 @@
                                         $titulo = $dato{'titulo'};         
                                         $fecha_pago = $dato['fecha_pago'];
                                         $estado = $dato['estado'];
+                                        $monto = $dato['monto'];
                                         $id_usuario = $dato['id_usuario'];
 
                                         if($estado == "Pago"){
@@ -92,6 +93,9 @@
 
                                         echo "<div class='row bloque' id='pago-pen'>";
                                         echo "    <h3 class='col-5'>$titulo</h3>";
+                                        echo "    <div class='col-1 cont-dat-blo'>";
+                                        echo "        <h3>$$monto</h3>";
+                                        echo "    </div>";
                                         echo "    <div class='col-2 cont-dat-blo'>";
                                         echo "        <h3><i class='far fa-calendar-alt'></i> $dia-$mes</h3>";
                                         echo "    </div>";
@@ -118,7 +122,7 @@
                                         echo "            </a>";
                                         echo "            <ul class='dropdown-menu' aria-labelledby='dropdownMenuLink'>";
                                         echo "                <li><a class='dropdown-item' href='php/actualizar_pago.php?id_pago=$id_pago&id_usuario=$id_usuario'><i style='color: #00be6f' class='fas fa-check-circle'></i>Pago realizado</a></li>";
-                                        echo "                <li><a class='dropdown-item' href='#'><i style='color: #535353' class='far fa-trash-alt'></i>Eliminar</a></li>";
+                                        echo "                <li><a class='dropdown-item' href='php/borrar_pago.php?id_pago=$id_pago'><i style='color: #535353' class='far fa-trash-alt'></i>Eliminar</a></li>";
                                         echo "            </ul>";
                                         echo "        </div>";
                                         echo "    </div>";

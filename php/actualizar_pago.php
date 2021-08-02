@@ -6,9 +6,6 @@ include("sesion.php");
 $id_pago = $_GET["id_pago"];
 $id_usuario = $_GET["id_usuario"];
 
-echo "Id_Pago: $id_pago <br>";
-echo "Id_usuario: $id_usuario <br>";
-
 
 //Actualizar pedido
 $result="UPDATE pagos
@@ -28,6 +25,7 @@ if ($resutl_ej = $conexion->query($result)) {
         $titulo = $dato['titulo'];
         $id_usuario = $dato['id_usuario'];
         $fecha_pago = $dato['fecha_pago'];
+        $monto = $dato['monto'];
     
         $sql_responsable = "SELECT * FROM `usuarios` WHERE id_usuario = $id_usuario;";                                            
         $sql_responsable_ej = mysqli_query(
@@ -40,11 +38,6 @@ if ($resutl_ej = $conexion->query($result)) {
             $email_noti_1 = $dato['email'];
         } 
 
-
-        echo "$nombre_responsable: $apellido_responsable $email_noti_1";
-        echo "Enviando Notificacion...";
-
- 
    
         include("mailer/envios/notificacion_pagos.php");       
 

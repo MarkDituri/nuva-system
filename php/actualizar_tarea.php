@@ -64,7 +64,6 @@ if ($resutl_ej = $conexion->query($result)) {
 
 
         if($id_estado_tarea == 3){
-            echo "Enviando Notificacion...";
           
             include("mailer/envios/notificacion_tareas.php");       
    

@@ -51,6 +51,7 @@ $body = file_get_contents('../php/mailer/contenidos/notificacion_pago/index.html
 $body = str_replace('$nombre_responsable', $nombre_responsable, $body);
 $body = str_replace('$apellido_responsable', $apellido_responsable, $body);
 $body = str_replace('$titulo', $titulo, $body);
+$body = str_replace('$monto', $monto, $body);
 $body = str_replace('$fecha_pago', $fecha_pago, $body);
 $body = str_replace('$email_noti_1', $email_noti_1, $body);
 $body = preg_replace('/\\\\/','', $body);

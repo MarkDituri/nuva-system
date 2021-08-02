@@ -3,7 +3,9 @@
 html{
     scroll-behavior:smooth
 }
-
+a{
+    word-wrap: break-word!important;
+}
 *{
     font-family:Montserrat,sans-serif;
     font-weight: normal;
@@ -1129,7 +1131,9 @@ tr:nth-child(even) {
 }
 
 /* Tareas */
-
+.detalles_tarea{
+    max-width: 550px!important;
+}
 .cont-tarea{
     margin-bottom: 15px;
     display: flex;

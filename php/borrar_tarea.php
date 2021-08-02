@@ -12,6 +12,7 @@ status = 'no' WHERE id_tarea = $id_tarea;";
 $consulta_ej = mysqli_query($conexion, $consulta);
 
 
+return false;
 if($consulta_ej == false){
     echo "<script>location.href='../tareas.php?msjerr=error';</script>";
 }
