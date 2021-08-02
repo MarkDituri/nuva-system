@@ -31,19 +31,19 @@ $mail->SMTPDebug = 0;
 $mail->Host = 'smtp.hostinger.com.ar';
 $mail->Port = 587;
 $mail->SMTPAuth = true;
-$mail->Username = 'admin@intranet-nuvatronic.com';
+$mail->Username = 'sistema@intranet-nuvatronic.com';
 //Password to use for SMTP authentication
 $mail->Password = "Nuva2020!!mail";
 //Set who the message is to be sent from
-$mail->setFrom('admin@intranet-nuvatronic.com', 'Intranet Nuvatronic');
+$mail->setFrom('sistema@intranet-nuvatronic.com', 'Intranet Nuvatronic');
 //Set an alternative reply-to address
-$mail->addReplyTo('admin@intranet-nuvatronic.com ', 'Intranet Nuvatronic');
+$mail->addReplyTo('sistema@intranet-nuvatronic.com ', 'Intranet Nuvatronic');
 //Set who the message is to be sent to
 //$mail->addAddress('nuvatronicarg@gmail.com', 'Intranet Nuvatronic');
 //Set the subject line
 $mail->addAddress($email_noti_1, 'Notificado 1');
 
-$mail->Subject = "Hola, $apellido_responsable ha completado una tarea con exito!";
+$mail->Subject = "Hola, $nombre_responsable te han realizado un pago!";
 //Read an HTML message body from an external file, convert referenced images to embedded,
 //convert HTML into a basic plain-text alternative body
 

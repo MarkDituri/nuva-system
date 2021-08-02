@@ -67,8 +67,7 @@ if ($resutl_ej = $conexion->query($result)) {
             echo "Enviando Notificacion...";
           
             include("mailer/envios/notificacion_tareas.php");       
-            
-            return false;
+   
           
         }
         header("Location: ../tareas.php?ver_dat=si"); /* Redirección del navegador */

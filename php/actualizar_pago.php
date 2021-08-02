@@ -47,7 +47,6 @@ if ($resutl_ej = $conexion->query($result)) {
  
    
         include("mailer/envios/notificacion_pagos.php");       
-        return false;
 
         header("Location: ../pagos.php?ver_dat=si"); /* Redirección del navegador */
     } 
