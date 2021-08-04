@@ -62,12 +62,8 @@ if ($resutl_ej = $conexion->query($result)) {
             $apellido_responsable = $dato['apellido'];
         } 
 
-
-        if($id_estado_tarea == 3){
-          
-            include("mailer/envios/notificacion_tareas.php");       
-   
-          
+        if($id_estado_tarea == 3){          
+            include("mailer/envios/notificacion_tareas.php");                    
         }
         header("Location: ../tareas.php?ver_dat=si"); /* Redirección del navegador */
     } 

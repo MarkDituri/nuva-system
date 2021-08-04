@@ -37,7 +37,6 @@ if ($resutl_ej = $conexion->query($result)) {
             $apellido_responsable = $dato['apellido'];
             $email_noti_1 = $dato['email'];
         } 
-
    
         include("mailer/envios/notificacion_pagos.php");       
 
